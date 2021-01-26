@@ -1,3 +1,6 @@
 from django.contrib import admin
+from riggpp.models import Employee
 
-# Register your models here.
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display=['name','age','location']
+admin.site.register(Employee,EmployeeAdmin)
